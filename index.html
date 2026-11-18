@@ -10,7 +10,7 @@
             --bg-page: #09090B;
             --bg-surface: #121215;
             --bg-elevated: #18181D;
-            --bg-hover: #202027;
+            --bg-hover: #212128;
             --border-subtle: #24242B;
             --border-accent: rgba(200, 169, 126, 0.35);
             --text-primary: #F5F5F2;
@@ -39,16 +39,16 @@
             flex-direction: column;
         }
 
-        /* HEADER */
+        /* TOPBAR */
         .topbar {
             background-color: var(--bg-surface);
             border-bottom: 1px solid var(--border-subtle);
-            padding: 18px 24px;
+            padding: 16px 22px;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            gap: 16px;
+            gap: 14px;
         }
 
         .brand-area {
@@ -61,10 +61,11 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            flex-wrap: wrap;
         }
 
         .brand-title {
-            font-size: 22px;
+            font-size: 21px;
             font-weight: 700;
             letter-spacing: -0.03em;
         }
@@ -81,8 +82,18 @@
             border-radius: 999px;
         }
 
+        .storage-badge {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 999px;
+            color: var(--green-light);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            background: rgba(52, 211, 153, 0.08);
+        }
+
         .brand-sub {
-            font-size: 12.5px;
+            font-size: 12px;
             color: var(--text-secondary);
         }
 
@@ -91,9 +102,9 @@
             align-items: center;
             background: var(--bg-elevated);
             border: 1px solid var(--border-subtle);
-            border-radius: 14px;
-            padding: 10px 18px;
-            gap: 24px;
+            border-radius: 12px;
+            padding: 9px 16px;
+            gap: 20px;
         }
 
         .kpi-item {
@@ -103,7 +114,7 @@
         }
 
         .kpi-label {
-            font-size: 10px;
+            font-size: 9.5px;
             font-weight: 600;
             letter-spacing: 0.08em;
             color: var(--text-secondary);
@@ -111,9 +122,8 @@
         }
 
         .kpi-value {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
-            color: var(--text-primary);
         }
 
         .kpi-value.green {
@@ -122,7 +132,7 @@
 
         .kpi-divider {
             width: 1px;
-            height: 28px;
+            height: 26px;
             background: var(--border-subtle);
         }
 
@@ -130,27 +140,29 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .btn {
             border: 1px solid var(--border-subtle);
             background: var(--bg-elevated);
             color: var(--text-primary);
-            padding: 10px 14px;
+            padding: 9px 13px;
             border-radius: 10px;
-            font-size: 12.5px;
+            font-size: 12px;
             font-weight: 600;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
-            gap: 7px;
-            transition: all 0.15s ease;
+            justify-content: center;
+            gap: 6px;
+            text-decoration: none;
+            transition: background 0.15s, border-color 0.15s;
         }
 
         .btn:hover {
             background: var(--bg-hover);
-            border-color: #363640;
+            border-color: #383842;
         }
 
         .btn-gold {
@@ -186,33 +198,32 @@
             border-color: var(--danger);
         }
 
-        /* FILTER BAR & INFO */
+        /* FILTERS & INFO */
         .sub-controls {
-            padding: 16px 24px 0 24px;
+            padding: 14px 22px 0 22px;
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 12px;
         }
 
         .filter-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 7px;
         }
 
         .filter-pill {
             background: var(--bg-surface);
             border: 1px solid var(--border-subtle);
             color: var(--text-secondary);
-            padding: 7px 13px;
+            padding: 6px 12px;
             border-radius: 999px;
-            font-size: 12px;
+            font-size: 11.5px;
             font-weight: 600;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: all 0.15s ease;
         }
 
         .filter-pill.active {
@@ -225,14 +236,14 @@
             background: rgba(255, 255, 255, 0.08);
             padding: 1px 7px;
             border-radius: 999px;
-            font-size: 11px;
+            font-size: 10.5px;
         }
 
         .info-banner {
             background: var(--bg-surface);
             border: 1px solid var(--border-subtle);
             border-radius: 14px;
-            padding: 14px 18px;
+            padding: 12px 16px;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -247,14 +258,14 @@
         }
 
         .info-badge {
-            width: 34px;
-            height: 34px;
-            border-radius: 10px;
+            width: 32px;
+            height: 32px;
+            border-radius: 9px;
             background: var(--gold-bg);
             border: 1px solid var(--border-accent);
             color: var(--gold);
             font-weight: 700;
-            font-size: 12px;
+            font-size: 11.5px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -262,13 +273,12 @@
         }
 
         .info-title {
-            font-size: 13.5px;
+            font-size: 13px;
             font-weight: 600;
-            color: var(--text-primary);
         }
 
         .info-desc {
-            font-size: 12px;
+            font-size: 11.5px;
             color: var(--text-secondary);
             margin-top: 2px;
         }
@@ -279,39 +289,39 @@
 
         .anchor-tag span {
             display: block;
-            font-size: 10.5px;
+            font-size: 10px;
             color: var(--text-secondary);
         }
 
         .anchor-tag strong {
-            font-size: 14px;
+            font-size: 13.5px;
             color: var(--gold);
         }
 
         /* KANBAN BOARD */
         .board-wrapper {
-            padding: 20px 24px 32px 24px;
+            padding: 18px 22px 28px 22px;
             display: flex;
-            gap: 16px;
+            gap: 14px;
             overflow-x: auto;
             flex: 1;
             align-items: flex-start;
         }
 
         .stage-col {
-            min-width: 280px;
-            max-width: 310px;
+            min-width: 270px;
+            max-width: 300px;
             flex: 1;
             background: var(--bg-surface);
             border: 1px solid var(--border-subtle);
             border-radius: 16px;
             display: flex;
             flex-direction: column;
-            max-height: calc(100vh - 250px);
+            max-height: calc(100vh - 235px);
         }
 
         .stage-header {
-            padding: 14px 16px;
+            padding: 13px 15px;
             border-bottom: 1px solid var(--border-subtle);
             display: flex;
             align-items: center;
@@ -319,35 +329,29 @@
             gap: 8px;
         }
 
-        .stage-title-group {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
-
         .stage-name {
-            font-size: 13.5px;
+            font-size: 13px;
             font-weight: 700;
-            color: var(--text-primary);
         }
 
         .stage-hint {
             font-size: 11px;
             color: var(--text-secondary);
+            margin-top: 2px;
         }
 
         .stage-counter {
             background: var(--bg-elevated);
             border: 1px solid var(--border-subtle);
             color: var(--gold);
-            font-size: 12px;
+            font-size: 11.5px;
             font-weight: 700;
             padding: 3px 9px;
             border-radius: 999px;
         }
 
         .stage-cards {
-            padding: 12px;
+            padding: 11px;
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -356,8 +360,8 @@
 
         .empty-stage {
             text-align: center;
-            padding: 24px 12px;
-            font-size: 12px;
+            padding: 22px 12px;
+            font-size: 11.5px;
             color: var(--text-muted);
             border: 1px dashed var(--border-subtle);
             border-radius: 10px;
@@ -368,17 +372,16 @@
             background: var(--bg-elevated);
             border: 1px solid var(--border-subtle);
             border-radius: 12px;
-            padding: 13px;
+            padding: 12px;
             cursor: pointer;
-            transition: border-color 0.15s, transform 0.12s;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 9px;
+            transition: border-color 0.15s;
         }
 
         .lead-card:hover {
             border-color: var(--border-accent);
-            transform: translateY(-1px);
         }
 
         .card-top {
@@ -389,9 +392,8 @@
         }
 
         .lead-name {
-            font-size: 14px;
+            font-size: 13.5px;
             font-weight: 600;
-            color: var(--text-primary);
             line-height: 1.3;
         }
 
@@ -415,7 +417,7 @@
 
         .btn-del-card:hover {
             color: #FCA5A5;
-            background: rgba(239, 68, 68, 0.12);
+            background: rgba(239, 68, 68, 0.15);
         }
 
         .btn-del-card.confirming {
@@ -445,7 +447,7 @@
         .card-note-preview {
             font-size: 11.5px;
             color: var(--text-secondary);
-            background: rgba(0, 0, 0, 0.22);
+            background: rgba(0, 0, 0, 0.25);
             padding: 7px 9px;
             border-radius: 8px;
             line-height: 1.4;
@@ -494,8 +496,7 @@
         .modal-backdrop {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.78);
-            backdrop-filter: blur(4px);
+            background: rgba(0, 0, 0, 0.8);
             display: none;
             align-items: center;
             justify-content: center;
@@ -510,15 +511,15 @@
         .modal-box {
             background: var(--bg-surface);
             border: 1px solid var(--border-subtle);
-            border-radius: 20px;
+            border-radius: 18px;
             width: 100%;
-            max-width: 620px;
+            max-width: 600px;
             max-height: 90vh;
             overflow-y: auto;
-            padding: 24px;
+            padding: 22px;
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 16px;
         }
 
         .modal-header {
@@ -527,16 +528,16 @@
             justify-content: space-between;
             gap: 12px;
             border-bottom: 1px solid var(--border-subtle);
-            padding-bottom: 14px;
+            padding-bottom: 12px;
         }
 
         .modal-title {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
         }
 
         .modal-subtitle {
-            font-size: 12.5px;
+            font-size: 12px;
             color: var(--text-secondary);
             margin-top: 3px;
         }
@@ -545,11 +546,11 @@
             background: var(--bg-elevated);
             border: 1px solid var(--border-subtle);
             color: var(--text-secondary);
-            width: 32px;
-            height: 32px;
+            width: 30px;
+            height: 30px;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .form-grid {
@@ -594,6 +595,12 @@
             border-color: var(--gold);
         }
 
+        .inline-error {
+            color: #FCA5A5;
+            font-size: 12px;
+            display: none;
+        }
+
         .stage-selector {
             display: flex;
             flex-wrap: wrap;
@@ -604,9 +611,9 @@
             background: var(--bg-elevated);
             border: 1px solid var(--border-subtle);
             color: var(--text-secondary);
-            padding: 7px 11px;
+            padding: 6px 10px;
             border-radius: 8px;
-            font-size: 12px;
+            font-size: 11.5px;
             font-weight: 600;
             cursor: pointer;
         }
@@ -621,14 +628,14 @@
             background: var(--bg-elevated);
             border: 1px solid var(--border-subtle);
             border-radius: 12px;
-            padding: 14px;
+            padding: 13px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 9px;
         }
 
         .section-label {
-            font-size: 11.5px;
+            font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.08em;
@@ -640,7 +647,6 @@
             align-items: center;
             gap: 10px;
             font-size: 13px;
-            color: var(--text-primary);
             cursor: pointer;
         }
 
@@ -663,7 +669,6 @@
             padding: 12px;
             font-size: 13px;
             line-height: 1.55;
-            color: var(--text-primary);
             white-space: pre-wrap;
         }
 
@@ -680,76 +685,102 @@
             justify-content: space-between;
             gap: 10px;
             border-top: 1px solid var(--border-subtle);
-            padding-top: 14px;
+            padding-top: 12px;
         }
 
         .manual-item {
             background: var(--bg-elevated);
             border: 1px solid var(--border-subtle);
             border-radius: 12px;
-            padding: 13px 15px;
+            padding: 12px 14px;
         }
 
         .manual-item h4 {
-            font-size: 14px;
+            font-size: 13.5px;
             color: var(--gold);
             margin-bottom: 4px;
         }
 
         .manual-item p {
-            font-size: 12.5px;
+            font-size: 12px;
             color: var(--text-secondary);
             line-height: 1.5;
+        }
+
+        /* TOAST */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-accent);
+            color: var(--text-primary);
+            padding: 11px 16px;
+            border-radius: 10px;
+            font-size: 12.5px;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(8px);
+            transition: all 0.2s ease;
+            z-index: 200;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
 
-    <!-- TOPBAR -->
     <header class="topbar">
         <div class="brand-area">
             <div class="brand-row">
                 <h1 class="brand-title">OttoClub</h1>
                 <span class="brand-pill">Vendas Avulsas &amp; Jornada</span>
+                <span class="storage-badge" id="storageStatus">● Salvo neste aparelho</span>
             </div>
             <p class="brand-sub">Pipeline comercial e transição clínica longitudinal (6 etapas)</p>
         </div>
 
         <div class="kpi-strip">
             <div class="kpi-item">
-                <span class="kpi-label">Em Negociação (1–3)</span>
+                <span class="kpi-label">Negociação (1–3)</span>
                 <span class="kpi-value" id="kpiNegociacao">0</span>
             </div>
             <div class="kpi-divider"></div>
             <div class="kpi-item">
-                <span class="kpi-label">Ativos / Onboarding (4–6)</span>
+                <span class="kpi-label">Ativos (4–6)</span>
                 <span class="kpi-value green" id="kpiAtivos">0</span>
             </div>
             <div class="kpi-divider"></div>
             <div class="kpi-item">
-                <span class="kpi-label">Receita Recorrente</span>
+                <span class="kpi-label">Receita Mensal</span>
                 <span class="kpi-value" id="kpiReceita">R$ 0</span>
             </div>
         </div>
 
         <div class="actions-bar">
-            <button class="btn btn-gold" onclick="openNewLeadModal()">+ Novo Lead</button>
-            <button class="btn" onclick="openModal('modalManual')">Manual das 6 Fases</button>
-            <button class="btn" onclick="exportBackup()">Salvar Backup</button>
-            <button class="btn btn-danger" id="btnClearAll" onclick="handleClearAll()">Limpar Lista</button>
+            <button type="button" class="btn btn-gold" id="btnOpenNew">+ Novo Lead</button>
+            <button type="button" class="btn" id="btnOpenManual">Manual 6 Fases</button>
+            <button type="button" class="btn" id="btnExportBackup">Exportar Backup</button>
+            <button type="button" class="btn" id="btnImportTrigger">Importar Backup</button>
+            <input type="file" id="importFileInput" accept=".json,application/json" style="display:none">
+            <button type="button" class="btn btn-danger" id="btnClearAll">Limpar Tudo</button>
         </div>
     </header>
 
-    <!-- FILTROS E BANNER -->
     <section class="sub-controls">
         <div class="filter-pills" id="filterPills"></div>
 
         <div class="info-banner">
             <div class="info-banner-left">
-                <div class="info-badge">OS</div>
+                <div class="info-badge">OC</div>
                 <div>
                     <div class="info-title">Arquitetura do Funil OttoClub: Da Descoberta ao Plano de Cuidado</div>
-                    <div class="info-desc">Clique em qualquer cartão para abrir o roteiro de WhatsApp específico da fase, marcar o checklist ou avançar o paciente. Os dados ficam salvos neste navegador.</div>
+                    <div class="info-desc">Gravação automática na memória deste navegador. Use <strong>Exportar Backup</strong> periodicamente para guardar uma cópia em arquivo.</div>
                 </div>
             </div>
             <div class="anchor-tag">
@@ -759,7 +790,6 @@
         </div>
     </section>
 
-    <!-- QUADRO KANBAN -->
     <main class="board-wrapper" id="kanbanBoard"></main>
 
     <!-- MODAL: NOVO LEAD -->
@@ -768,9 +798,9 @@
             <div class="modal-header">
                 <div>
                     <h2 class="modal-title">Cadastrar Novo Contato</h2>
-                    <p class="modal-subtitle">Adicione um lead avulso ao funil comercial da OttoClub</p>
+                    <p class="modal-subtitle">O contato ficará salvo automaticamente neste navegador</p>
                 </div>
-                <button class="btn-close" onclick="closeModal('modalNew')">✕</button>
+                <button type="button" class="btn-close" data-close="modalNew">✕</button>
             </div>
 
             <div class="form-grid">
@@ -783,7 +813,7 @@
                     <input type="text" id="newPhone" placeholder="Ex: 64 99999-0000">
                 </div>
                 <div class="field">
-                    <label>Origem do Contato</label>
+                    <label>Origem</label>
                     <select id="newOrigin">
                         <option value="Instagram">Instagram</option>
                         <option value="Indicação">Indicação</option>
@@ -809,18 +839,20 @@
                 </div>
                 <div class="field full">
                     <label>Observação / Contexto Clínico ou Comercial</label>
-                    <textarea id="newNote" rows="3" placeholder="Ex: Procurou por cansaço e busca acompanhamento médico contínuo..."></textarea>
+                    <textarea id="newNote" rows="3" placeholder="Ex: Procurou acompanhamento preventivo..."></textarea>
                 </div>
             </div>
 
+            <div class="inline-error" id="newLeadError">Preencha pelo menos o nome e o WhatsApp do contato.</div>
+
             <div class="modal-footer">
-                <button class="btn" onclick="closeModal('modalNew')">Cancelar</button>
-                <button class="btn btn-gold" onclick="createLead()">Adicionar ao Funil</button>
+                <button type="button" class="btn" data-close="modalNew">Cancelar</button>
+                <button type="button" class="btn btn-gold" id="btnCreateLead">Adicionar ao Funil</button>
             </div>
         </div>
     </div>
 
-    <!-- MODAL: DETALHE DO LEAD -->
+    <!-- MODAL: DETALHES DO LEAD -->
     <div class="modal-backdrop" id="modalDetail">
         <div class="modal-box" id="detailContent"></div>
     </div>
@@ -833,7 +865,7 @@
                     <h2 class="modal-title">Manual Estratégico — As 6 Etapas OttoClub</h2>
                     <p class="modal-subtitle">Do primeiro contato comercial à fidelização pelo cuidado longitudinal</p>
                 </div>
-                <button class="btn-close" onclick="closeModal('modalManual')">✕</button>
+                <button type="button" class="btn-close" data-close="modalManual">✕</button>
             </div>
 
             <div class="manual-item">
@@ -858,18 +890,20 @@
             </div>
             <div class="manual-item">
                 <h4>6. PTS (Projeto Terapêutico Singular)</h4>
-                <p>Entrega do plano individualizado de cuidado contínuo com metas pactuadas e retornos programados — o que consolida vínculo e retenção.</p>
+                <p>Entrega do plano individualizado de cuidado contínuo com metas pactuadas e retornos programados — consolidando vínculo e retenção.</p>
             </div>
 
             <div class="modal-footer">
                 <span></span>
-                <button class="btn btn-gold" onclick="closeModal('modalManual')">Entendi</button>
+                <button type="button" class="btn btn-gold" data-close="modalManual">Entendi</button>
             </div>
         </div>
     </div>
 
+    <div class="toast" id="toast"></div>
+
     <script>
-        const STORAGE_KEY = 'ottoclub_vendas_avulsas_v1';
+        const STORAGE_KEY = 'ottoclub_vendas_avulsas_local_v1';
 
         const STAGES = [
             {
@@ -889,7 +923,7 @@
                 hint: 'Quebra de objeções do modelo',
                 checklist: [
                     'Explicada diferença entre OttoClub e plano hospitalar',
-                    'Esclarecido o escopo de Atenção Primária e triagem',
+                    'Esclarecido escopo de Atenção Primária e triagem',
                     'Dúvidas iniciais respondidas sem pressão'
                 ],
                 script: '{nome}, é super normal estranhar no começo porque não somos um plano de saúde tradicional cheio de burocracia. Na OttoClub, o foco é resolver 85% a 90% das questões de saúde do dia a dia com acompanhamento médico próximo, renovação de receitas, pedidos de exames e orientação rápida sempre que precisar.'
@@ -900,8 +934,8 @@
                 hint: 'Ancoragem de valor (R$ 100/mês)',
                 checklist: [
                     'Apresentado valor mensal de R$ 100,00',
-                    'Comparado com custo de consulta particular / UPA',
-                    'Enviado link de adesão ou condições'
+                    'Comparado com consulta particular / UPA',
+                    'Enviadas condições de adesão'
                 ],
                 script: '{nome}, hoje uma única consulta particular avulsa custa entre R$ 300 e R$ 450, e você sai sem acompanhamento depois. Na OttoClub, por R$ 100/mês, você tem acompanhamento médico longitudinal, orientação direta e prevenção contínua. Faz sentido garantirmos sua vaga ainda esta semana?'
             },
@@ -912,7 +946,7 @@
                 checklist: [
                     'Dados cadastrais completos coletados',
                     'Primeira mensalidade confirmada',
-                    'Acesso ao canal oficial da OttoClub liberado'
+                    'Canal direto da OttoClub liberado'
                 ],
                 script: 'Seja muito bem-vindo(a) à OttoClub, {nome}! Sua inscrição está confirmada. A partir de agora esse é o seu canal direto de cuidado. O próximo passo é agendarmos sua Consulta de Acolhimento para conhecermos todo o seu histórico de saúde com calma. Qual turno fica melhor para você?'
             },
@@ -922,7 +956,7 @@
                 hint: 'Avaliação clínica integral',
                 checklist: [
                     'Consulta de acolhimento agendada',
-                    'Anamnese longitudinal e histórico realizados',
+                    'Anamnese longitudinal realizada',
                     'Exames e medicações atuais revisados'
                 ],
                 script: 'Olá, {nome}! Passando para confirmar nossa Consulta de Acolhimento. Se tiver exames recentes ou lista de medicações que usa no dia a dia, já deixa separado para avaliarmos juntos e montarmos seu plano de acompanhamento.'
@@ -942,43 +976,33 @@
 
         const DEFAULT_LEADS = [
             {
-                id: 'lead_1',
-                name: 'Mariana Costa',
+                id: 'lead_exemplo_1',
+                name: 'Mariana Costa (Exemplo)',
                 phone: '64 99912-3456',
                 origin: 'Instagram',
                 stage: 1,
                 price: 100,
-                note: 'Respondeu storie sobre acompanhamento preventivo e cansaço crônico.',
+                note: 'Respondeu storie sobre acompanhamento preventivo e cansaço.',
                 checks: [true, false, false]
             },
             {
-                id: 'lead_2',
-                name: 'Ricardo Mendes',
+                id: 'lead_exemplo_2',
+                name: 'Ricardo Mendes (Exemplo)',
                 phone: '64 99934-7890',
                 origin: 'Indicação',
                 stage: 2,
                 price: 100,
-                note: 'Perguntou se cobre internação ou se funciona como acompanhamento ambulatorial.',
+                note: 'Perguntou como funciona a diferença em relação a plano de saúde.',
                 checks: [true, false, false]
             },
             {
-                id: 'lead_3',
-                name: 'Patrícia Almeida',
+                id: 'lead_exemplo_3',
+                name: 'Patrícia Almeida (Exemplo)',
                 phone: '64 99956-1122',
                 origin: 'Consulta Avulsa',
                 stage: 3,
                 price: 100,
-                note: 'Gostou do modelo e está avaliando fechar para ela e o esposo.',
-                checks: [true, true, false]
-            },
-            {
-                id: 'lead_4',
-                name: 'Carlos Henrique',
-                phone: '64 99978-4455',
-                origin: 'Condomínio',
-                stage: 5,
-                price: 100,
-                note: 'Assinatura ativa; aguardando retorno com exames laboratoriais para fechar PTS.',
+                note: 'Gostou da proposta de R$ 100/mês; fechando adesão.',
                 checks: [true, true, false]
             }
         ];
@@ -987,27 +1011,43 @@
         let activeFilter = 'all';
         let pendingDeleteId = null;
         let confirmClearAll = false;
+        let detailDeleteConfirm = false;
 
         function loadLeads() {
             try {
                 const raw = localStorage.getItem(STORAGE_KEY);
                 if (raw === null) {
                     leads = JSON.parse(JSON.stringify(DEFAULT_LEADS));
-                    saveLeads();
+                    saveLeads(false);
                 } else {
-                    leads = JSON.parse(raw);
+                    const parsed = JSON.parse(raw);
+                    leads = Array.isArray(parsed) ? parsed : [];
                 }
             } catch (e) {
                 leads = JSON.parse(JSON.stringify(DEFAULT_LEADS));
             }
         }
 
-        function saveLeads() {
+        function saveLeads(notify) {
             try {
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(leads));
+                const badge = document.getElementById('storageStatus');
+                if (badge) {
+                    badge.textContent = '● Salvo neste aparelho';
+                }
+                if (notify) {
+                    showToast('Alteração salva neste aparelho!');
+                }
             } catch (e) {
-                console.warn('Não foi possível salvar no navegador:', e);
+                showToast('Atenção: não foi possível gravar na memória deste navegador.');
             }
+        }
+
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 2600);
         }
 
         function formatBRL(val) {
@@ -1046,23 +1086,18 @@
 
         function renderFilters() {
             const container = document.getElementById('filterPills');
-            let html = `<button class="filter-pill ${activeFilter === 'all' ? 'active' : ''}" onclick="setFilter('all')">
+            let html = `<button type="button" class="filter-pill ${activeFilter === 'all' ? 'active' : ''}" data-filter="all">
                 Todas as Etapas <span class="pill-count">${leads.length}</span>
             </button>`;
 
             STAGES.forEach(st => {
                 const count = leads.filter(l => l.stage === st.id).length;
-                html += `<button class="filter-pill ${activeFilter === st.id ? 'active' : ''}" onclick="setFilter(${st.id})">
+                html += `<button type="button" class="filter-pill ${activeFilter === st.id ? 'active' : ''}" data-filter="${st.id}">
                     ${st.title} <span class="pill-count">${count}</span>
                 </button>`;
             });
 
             container.innerHTML = html;
-        }
-
-        function setFilter(val) {
-            activeFilter = val;
-            renderAll();
         }
 
         function renderBoard() {
@@ -1081,15 +1116,13 @@
                         const isConfirming = pendingDeleteId === lead.id;
 
                         return `
-                            <div class="lead-card" onclick="openDetailModal('${lead.id}')">
+                            <div class="lead-card" data-open-lead="${escapeHTML(lead.id)}">
                                 <div class="card-top">
                                     <div>
                                         <div class="lead-name">${escapeHTML(lead.name)}</div>
                                         <div class="lead-phone">${escapeHTML(lead.phone)}</div>
                                     </div>
-                                    <button class="btn-del-card ${isConfirming ? 'confirming' : ''}"
-                                            onclick="event.stopPropagation(); deleteLeadCard('${lead.id}')"
-                                            title="Eliminar contato">
+                                    <button type="button" class="btn-del-card ${isConfirming ? 'confirming' : ''}" data-del-lead="${escapeHTML(lead.id)}" title="Eliminar contato">
                                         ${isConfirming ? 'Confirmar?' : '✕'}
                                     </button>
                                 </div>
@@ -1102,14 +1135,10 @@
                                 ${lead.note ? `<div class="card-note-preview">${escapeHTML(lead.note)}</div>` : ''}
 
                                 <div class="card-footer">
-                                    <span class="check-status">✓ ${doneCount}/${stage.checklist.length} etapa</span>
+                                    <span class="check-status">✓ ${doneCount}/${stage.checklist.length}</span>
                                     <div class="move-btns">
-                                        <button class="btn-step" ${stage.id === 1 ? 'disabled' : ''}
-                                                onclick="event.stopPropagation(); moveLead('${lead.id}', -1)"
-                                                title="Voltar etapa">←</button>
-                                        <button class="btn-step" ${stage.id === 6 ? 'disabled' : ''}
-                                                onclick="event.stopPropagation(); moveLead('${lead.id}', 1)"
-                                                title="Avançar etapa">→</button>
+                                        <button type="button" class="btn-step" ${stage.id === 1 ? 'disabled' : ''} data-move-lead="${escapeHTML(lead.id)}" data-delta="-1" title="Voltar etapa">←</button>
+                                        <button type="button" class="btn-step" ${stage.id === 6 ? 'disabled' : ''} data-move-lead="${escapeHTML(lead.id)}" data-delta="1" title="Avançar etapa">→</button>
                                     </div>
                                 </div>
                             </div>
@@ -1119,7 +1148,7 @@
                 return `
                     <div class="stage-col">
                         <div class="stage-header">
-                            <div class="stage-title-group">
+                            <div>
                                 <div class="stage-name">${stage.title}</div>
                                 <div class="stage-hint">${stage.hint}</div>
                             </div>
@@ -1131,51 +1160,6 @@
             }).join('');
         }
 
-        function moveLead(id, delta) {
-            const lead = leads.find(l => l.id === id);
-            if (!lead) return;
-            const next = lead.stage + delta;
-            if (next < 1 || next > 6) return;
-            lead.stage = next;
-            lead.checks = [false, false, false];
-            pendingDeleteId = null;
-            saveLeads();
-            renderAll();
-        }
-
-        function deleteLeadCard(id) {
-            if (pendingDeleteId !== id) {
-                pendingDeleteId = id;
-                renderBoard();
-                return;
-            }
-            leads = leads.filter(l => l.id !== id);
-            pendingDeleteId = null;
-            saveLeads();
-            renderAll();
-        }
-
-        function handleClearAll() {
-            const btn = document.getElementById('btnClearAll');
-            if (!confirmClearAll) {
-                confirmClearAll = true;
-                btn.classList.add('confirming');
-                btn.textContent = 'Confirmar Limpeza?';
-                setTimeout(() => {
-                    confirmClearAll = false;
-                    btn.classList.remove('confirming');
-                    btn.textContent = 'Limpar Lista';
-                }, 4000);
-                return;
-            }
-            leads = [];
-            confirmClearAll = false;
-            btn.classList.remove('confirming');
-            btn.textContent = 'Limpar Lista';
-            saveLeads();
-            renderAll();
-        }
-
         function openModal(id) {
             document.getElementById(id).classList.add('open');
         }
@@ -1183,46 +1167,6 @@
         function closeModal(id) {
             document.getElementById(id).classList.remove('open');
         }
-
-        function openNewLeadModal() {
-            document.getElementById('newName').value = '';
-            document.getElementById('newPhone').value = '';
-            document.getElementById('newNote').value = '';
-            document.getElementById('newPrice').value = '100';
-            document.getElementById('newStage').value = activeFilter === 'all' ? '1' : String(activeFilter);
-            openModal('modalNew');
-        }
-
-        function createLead() {
-            const name = document.getElementById('newName').value.trim();
-            const phone = document.getElementById('newPhone').value.trim();
-            const origin = document.getElementById('newOrigin').value;
-            const stage = Number(document.getElementById('newStage').value) || 1;
-            const price = Number(document.getElementById('newPrice').value) || 100;
-            const note = document.getElementById('newNote').value.trim();
-
-            if (!name || !phone) {
-                alert('Preencha pelo menos o nome e o WhatsApp do contato.');
-                return;
-            }
-
-            leads.unshift({
-                id: 'lead_' + Date.now(),
-                name,
-                phone,
-                origin,
-                stage,
-                price,
-                note,
-                checks: [false, false, false]
-            });
-
-            saveLeads();
-            closeModal('modalNew');
-            renderAll();
-        }
-
-        let detailDeleteConfirm = false;
 
         function openDetailModal(id) {
             const lead = leads.find(l => l.id === id);
@@ -1235,16 +1179,14 @@
             const checks = Array.isArray(lead.checks) ? lead.checks : [false, false, false];
 
             const stagePills = STAGES.map(s => `
-                <button class="stage-opt ${s.id === lead.stage ? 'active' : ''}"
-                        onclick="changeLeadStageInModal('${lead.id}', ${s.id})">
+                <button type="button" class="stage-opt ${s.id === lead.stage ? 'active' : ''}" data-set-stage="${s.id}" data-lead-id="${escapeHTML(lead.id)}">
                     ${s.title}
                 </button>
             `).join('');
 
             const checklistHTML = stage.checklist.map((item, idx) => `
                 <label class="checklist-item ${checks[idx] ? 'done' : ''}">
-                    <input type="checkbox" ${checks[idx] ? 'checked' : ''}
-                           onchange="toggleLeadCheck('${lead.id}', ${idx})">
+                    <input type="checkbox" ${checks[idx] ? 'checked' : ''} data-toggle-check="${idx}" data-lead-id="${escapeHTML(lead.id)}">
                     <span>${escapeHTML(item)}</span>
                 </label>
             `).join('');
@@ -1260,7 +1202,7 @@
                         <h2 class="modal-title">${escapeHTML(lead.name)}</h2>
                         <p class="modal-subtitle">${escapeHTML(lead.phone)} • ${escapeHTML(lead.origin)} • ${formatBRL(lead.price)}/mês</p>
                     </div>
-                    <button class="btn-close" onclick="closeModal('modalDetail')">✕</button>
+                    <button type="button" class="btn-close" data-close="modalDetail">✕</button>
                 </div>
 
                 <div class="section-block">
@@ -1269,35 +1211,280 @@
                 </div>
 
                 <div class="section-block">
-                    <span class="section-label">Checklist da Etapa — ${stage.title}</span>
+                    <span class="section-label">Checklist — ${stage.title}</span>
                     ${checklistHTML}
                 </div>
 
                 <div class="section-block">
-                    <span class="section-label">Roteiro Sugerido para WhatsApp</span>
+                    <span class="section-label">Mensagem Sugerida para WhatsApp</span>
                     <div class="script-box" id="activeScriptText">${escapeHTML(personalizedScript)}</div>
                     <div class="script-actions">
-                        <button class="btn" id="btnCopyScript" onclick="copyCurrentScript()">Copiar Texto</button>
-                        <a class="btn btn-whatsapp" href="${waUrl}" target="_blank" rel="noopener">Abrir WhatsApp do Contato</a>
+                        <button type="button" class="btn" id="btnCopyScript">Copiar Texto</button>
+                        <a class="btn btn-whatsapp" href="${waUrl}" target="_blank" rel="noopener noreferrer">Abrir WhatsApp do Contato</a>
                     </div>
                 </div>
 
                 <div class="field">
                     <label>Anotações do Paciente / Negociação</label>
-                    <textarea rows="3" onchange="updateLeadNote('${lead.id}', this.value)">${escapeHTML(lead.note)}</textarea>
+                    <textarea rows="3" id="detailNoteInput" data-lead-id="${escapeHTML(lead.id)}">${escapeHTML(lead.note)}</textarea>
                 </div>
 
                 <div class="modal-footer">
-                    <button class="btn btn-danger" id="btnModalDelete" onclick="deleteLeadFromModal('${lead.id}')">Eliminar Contato</button>
-                    <button class="btn btn-gold" onclick="closeModal('modalDetail')">Concluir</button>
+                    <button type="button" class="btn btn-danger" id="btnModalDelete" data-lead-id="${escapeHTML(lead.id)}">Eliminar Contato</button>
+                    <button type="button" class="btn btn-gold" id="btnSaveDetail" data-lead-id="${escapeHTML(lead.id)}">Salvar e Fechar</button>
                 </div>
             `;
 
             openModal('modalDetail');
         }
 
-        function changeLeadStageInModal(id, newStage) {
-            const lead = leads.find(l => l.id === id);
-            if (!lead) return;
-            lead.stage = newStage;
-            lead.checks
+        function exportBackupFile() {
+            const today = new Date().toISOString().slice(0, 10);
+            const payload = {
+                app: 'OttoClub - Funil de Vendas Avulsas',
+                exportedAt: new Date().toISOString(),
+                leads: leads
+            };
+            const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `ottoclub-backup-${today}.json`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
+            showToast('Arquivo de backup baixado!');
+        }
+
+        // DELEGAÇÃO GLOBAL DE CLIQUES
+        document.addEventListener('click', function(e) {
+            const closeTarget = e.target.closest('[data-close]');
+            if (closeTarget) {
+                closeModal(closeTarget.getAttribute('data-close'));
+                return;
+            }
+
+            if (e.target.id === 'btnOpenNew') {
+                document.getElementById('newName').value = '';
+                document.getElementById('newPhone').value = '';
+                document.getElementById('newNote').value = '';
+                document.getElementById('newPrice').value = '100';
+                document.getElementById('newStage').value = activeFilter === 'all' ? '1' : String(activeFilter);
+                document.getElementById('newLeadError').style.display = 'none';
+                openModal('modalNew');
+                return;
+            }
+
+            if (e.target.id === 'btnCreateLead') {
+                const name = document.getElementById('newName').value.trim();
+                const phone = document.getElementById('newPhone').value.trim();
+                if (!name || !phone) {
+                    document.getElementById('newLeadError').style.display = 'block';
+                    return;
+                }
+                leads.unshift({
+                    id: 'lead_' + Date.now(),
+                    name: name,
+                    phone: phone,
+                    origin: document.getElementById('newOrigin').value,
+                    stage: Number(document.getElementById('newStage').value) || 1,
+                    price: Number(document.getElementById('newPrice').value) || 100,
+                    note: document.getElementById('newNote').value.trim(),
+                    checks: [false, false, false]
+                });
+                closeModal('modalNew');
+                saveLeads(true);
+                renderAll();
+                return;
+            }
+
+            if (e.target.id === 'btnOpenManual') {
+                openModal('modalManual');
+                return;
+            }
+
+            if (e.target.id === 'btnExportBackup') {
+                exportBackupFile();
+                return;
+            }
+
+            if (e.target.id === 'btnImportTrigger') {
+                document.getElementById('importFileInput').click();
+                return;
+            }
+
+            if (e.target.id === 'btnClearAll') {
+                const btn = document.getElementById('btnClearAll');
+                if (!confirmClearAll) {
+                    confirmClearAll = true;
+                    btn.classList.add('confirming');
+                    btn.textContent = 'Confirmar Limpeza?';
+                    setTimeout(() => {
+                        confirmClearAll = false;
+                        btn.classList.remove('confirming');
+                        btn.textContent = 'Limpar Tudo';
+                    }, 4000);
+                    return;
+                }
+                leads = [];
+                confirmClearAll = false;
+                btn.classList.remove('confirming');
+                btn.textContent = 'Limpar Tudo';
+                saveLeads(true);
+                renderAll();
+                return;
+            }
+
+            const filterBtn = e.target.closest('[data-filter]');
+            if (filterBtn) {
+                const f = filterBtn.getAttribute('data-filter');
+                activeFilter = f === 'all' ? 'all' : Number(f);
+                renderAll();
+                return;
+            }
+
+            const delCardBtn = e.target.closest('[data-del-lead]');
+            if (delCardBtn) {
+                const id = delCardBtn.getAttribute('data-del-lead');
+                if (pendingDeleteId !== id) {
+                    pendingDeleteId = id;
+                    renderBoard();
+                    return;
+                }
+                leads = leads.filter(l => l.id !== id);
+                pendingDeleteId = null;
+                saveLeads(true);
+                renderAll();
+                return;
+            }
+
+            const moveBtn = e.target.closest('[data-move-lead]');
+            if (moveBtn) {
+                const id = moveBtn.getAttribute('data-move-lead');
+                const delta = Number(moveBtn.getAttribute('data-delta'));
+                const lead = leads.find(l => l.id === id);
+                if (lead && lead.stage + delta >= 1 && lead.stage + delta <= 6) {
+                    lead.stage += delta;
+                    lead.checks = [false, false, false];
+                    pendingDeleteId = null;
+                    saveLeads(true);
+                    renderAll();
+                }
+                return;
+            }
+
+            const cardEl = e.target.closest('[data-open-lead]');
+            if (cardEl) {
+                openDetailModal(cardEl.getAttribute('data-open-lead'));
+                return;
+            }
+
+            const stageOpt = e.target.closest('[data-set-stage]');
+            if (stageOpt) {
+                const id = stageOpt.getAttribute('data-lead-id');
+                const newSt = Number(stageOpt.getAttribute('data-set-stage'));
+                const lead = leads.find(l => l.id === id);
+                if (lead) {
+                    lead.stage = newSt;
+                    lead.checks = [false, false, false];
+                    saveLeads(true);
+                    renderAll();
+                    openDetailModal(id);
+                }
+                return;
+            }
+
+            if (e.target.id === 'btnCopyScript') {
+                const text = document.getElementById('activeScriptText').textContent;
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(text).then(() => showToast('Texto copiado!'));
+                } else {
+                    const tmp = document.createElement('textarea');
+                    tmp.value = text;
+                    document.body.appendChild(tmp);
+                    tmp.select();
+                    document.execCommand('copy');
+                    tmp.remove();
+                    showToast('Texto copiado!');
+                }
+                return;
+            }
+
+            if (e.target.id === 'btnModalDelete') {
+                const id = e.target.getAttribute('data-lead-id');
+                if (!detailDeleteConfirm) {
+                    detailDeleteConfirm = true;
+                    e.target.classList.add('confirming');
+                    e.target.textContent = 'Clique de novo para excluir';
+                    return;
+                }
+                leads = leads.filter(l => l.id !== id);
+                closeModal('modalDetail');
+                saveLeads(true);
+                renderAll();
+                return;
+            }
+
+            if (e.target.id === 'btnSaveDetail') {
+                const id = e.target.getAttribute('data-lead-id');
+                const lead = leads.find(l => l.id === id);
+                const noteEl = document.getElementById('detailNoteInput');
+                if (lead && noteEl) {
+                    lead.note = noteEl.value.trim();
+                }
+                closeModal('modalDetail');
+                saveLeads(true);
+                renderAll();
+            }
+        });
+
+        // CHECKLISTS E IMPORTAÇÃO DE BACKUP
+        document.addEventListener('change', function(e) {
+            const checkEl = e.target.closest('[data-toggle-check]');
+            if (checkEl) {
+                const id = checkEl.getAttribute('data-lead-id');
+                const idx = Number(checkEl.getAttribute('data-toggle-check'));
+                const lead = leads.find(l => l.id === id);
+                if (lead) {
+                    if (!Array.isArray(lead.checks)) lead.checks = [false, false, false];
+                    lead.checks[idx] = checkEl.checked;
+                    saveLeads(false);
+                    renderAll();
+                    openDetailModal(id);
+                }
+                return;
+            }
+
+            if (e.target.id === 'importFileInput') {
+                const file = e.target.files && e.target.files[0];
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    try {
+                        const parsed = JSON.parse(evt.target.result);
+                        const importedLeads = Array.isArray(parsed) ? parsed : parsed.leads;
+                        if (!Array.isArray(importedLeads)) {
+                            showToast('Arquivo inválido. Use um backup gerado pelo painel.');
+                            return;
+                        }
+                        leads = importedLeads;
+                        saveLeads(false);
+                        renderAll();
+                        showToast(`Backup restaurado (${leads.length} contatos)!`);
+                    } catch (err) {
+                        showToast('Não foi possível ler o arquivo JSON.');
+                    }
+                    e.target.value = '';
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        // INICIALIZAÇÃO
+        loadLeads();
+        renderAll();
+    </script>
+</body>
+</html>
